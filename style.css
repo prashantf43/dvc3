@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/bg_image.jpg);
+}
+
+.card{
+    /* border: 1px solid black; */
+    max-width: 500px;
+    min-width: 300px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0px 30px;
+}
+
+.logo{
+    height: 150px;
+    width: 150px;
+    border: 5px solid black;
+    margin: auto;
+    background-image: url(img/profile.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.card:hover .logo{
+    transform: translateY(-50px);
+}
+
+.card:hover button{
+    display: block;
+    cursor: pointer;
+}
+
+button{
+    background-color: royalblue;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 20px;
+    padding: 7px 10px;
+    border-radius: 20px;
+    position: relative;
+    top: -20px;
+    display: none;
+    margin: auto;
+}
+
+.icons, .profile_info{
+    margin: 15px;
+    text-align: center;
+    transform: scale(0);
+    overflow: hidden;
+    transition: all 0.5s;
+    height: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons a{
+    margin: 15px;
+}
+
+.icons img:hover{
+    transition: all 0.3s;
+    transform: scale(1.25);
+}
+
+.name{
+    border-bottom: 7px solid black;
+    display: inline-block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.title{
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+}
+
+/* .profile_info{
+    margin: 10px auto;
+    height: 0px;
+    transform: scale(0);
+    transition: all 0.5px;
+    overflow: auto;
+} */
+
+.profile_info>div{
+    float: left;
+    /* margin: 20px; */
+}
+
+.profile_info div div{
+    color: gray;
+}
+
+.card:hover .icons, .card:hover .profile_info{
+    height: auto;
+    transform: scale(1);
+}
